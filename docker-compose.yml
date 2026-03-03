@@ -1,0 +1,40 @@
+version: "3.8"
+
+services:
+
+  backend:
+    build: ./backend
+    container_name: blinklink-backend
+    restart: always
+    env_file:
+      - ./backend/.env
+    ports:
+      - "3001:3001"
+    depends_on:
+      - mongo
+      - redis
+
+  frontend:
+    build: ./frontend
+    container_name: blinklink-frontend
+    env_file:
+      - ./frontend/.env
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
+  mongo:
+    image: mongo:6
+    container_name: blinklink-mongo
+    restart: always
+    volumes:
+      - mongo-data:/data/db
+
+  redis:
+    image: redis:7
+    container_name: blinklink-redis
+    restart: always
+
+volumes:
+  mongo-data:
