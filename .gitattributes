@@ -1,0 +1,12 @@
+# Hide frontend framework code from language stats
+frontend/** linguist-vendored
+frontend/** -linguist-detectable
+
+# Hide build files
+dist/** linguist-vendored
+node_modules/** linguist-vendored
+
+# Backend should represent main logic language
+backend/**/*.js linguist-language=JavaScript
+backend/**/*.jsx linguist-language=JavaScript
+backend/**/*.ts linguist-language=JavaScript
