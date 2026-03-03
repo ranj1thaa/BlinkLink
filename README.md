@@ -1,3 +1,12 @@
+
+<p align="center">
+
+<img src="https://img.shields.io/badge/Backend-Node.js-green" />
+<img src="https://img.shields.io/badge/Frontend-React-blue" />
+<img src="https://img.shields.io/badge/Database-MongoDB-brightgreen" />
+<img src="https://img.shields.io/badge/Stack-MERN-purple" />
+
+</p>
 <div align="center">
 
 <h1>🔗 BlinkLink – Full Stack URL Shortener & Analytics Platform</h1>
